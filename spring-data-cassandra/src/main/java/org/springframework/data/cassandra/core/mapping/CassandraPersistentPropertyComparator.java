@@ -18,7 +18,7 @@ package org.springframework.data.cassandra.core.mapping;
 import java.util.Comparator;
 import java.util.Optional;
 
-import org.springframework.data.cql.core.CqlIdentifier;
+import org.springframework.data.cassandra.core.cql.CqlIdentifier;
 
 /**
  * {@link Comparator} implementation that orders {@link CassandraPersistentProperty} instances.

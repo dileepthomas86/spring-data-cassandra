@@ -25,20 +25,20 @@ import org.springframework.data.cassandra.core.convert.CassandraConverter;
 import org.springframework.data.cassandra.core.convert.MappingCassandraConverter;
 import org.springframework.data.cassandra.core.convert.QueryMapper;
 import org.springframework.data.cassandra.core.convert.UpdateMapper;
+import org.springframework.data.cassandra.core.cql.AsyncCqlOperations;
+import org.springframework.data.cassandra.core.cql.AsyncCqlTemplate;
+import org.springframework.data.cassandra.core.cql.AsyncSessionCallback;
+import org.springframework.data.cassandra.core.cql.CqlExceptionTranslator;
+import org.springframework.data.cassandra.core.cql.CqlIdentifier;
+import org.springframework.data.cassandra.core.cql.CqlProvider;
+import org.springframework.data.cassandra.core.cql.GuavaListenableFutureAdapter;
+import org.springframework.data.cassandra.core.cql.QueryOptions;
+import org.springframework.data.cassandra.core.cql.session.DefaultSessionFactory;
+import org.springframework.data.cassandra.core.cql.session.SessionFactory;
 import org.springframework.data.cassandra.core.mapping.CassandraMappingContext;
 import org.springframework.data.cassandra.core.mapping.CassandraPersistentEntity;
 import org.springframework.data.cassandra.core.mapping.CassandraPersistentProperty;
 import org.springframework.data.cassandra.core.query.Query;
-import org.springframework.data.cassandra.cql.CqlExceptionTranslator;
-import org.springframework.data.cql.core.AsyncCqlOperations;
-import org.springframework.data.cql.core.AsyncCqlTemplate;
-import org.springframework.data.cql.core.AsyncSessionCallback;
-import org.springframework.data.cql.core.CqlIdentifier;
-import org.springframework.data.cql.core.CqlProvider;
-import org.springframework.data.cql.core.GuavaListenableFutureAdapter;
-import org.springframework.data.cql.core.QueryOptions;
-import org.springframework.data.cql.core.session.DefaultSessionFactory;
-import org.springframework.data.cql.core.session.SessionFactory;
 import org.springframework.data.mapping.context.MappingContext;
 import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;
@@ -471,7 +471,7 @@ public class AsyncCassandraTemplate implements AsyncCassandraOperations {
 
 	/*
 	 * (non-Javadoc)
-	 * @see org.springframework.data.cassandra.core.AsyncCassandraOperations#delete(java.lang.Object, org.springframework.data.cql.core.QueryOptions)
+	 * @see org.springframework.data.cassandra.core.AsyncCassandraOperations#delete(java.lang.Object, org.springframework.data.cassandra.core.cql.QueryOptions)
 	 */
 	@Override
 	public <T> ListenableFuture<T> delete(T entity, QueryOptions options) {

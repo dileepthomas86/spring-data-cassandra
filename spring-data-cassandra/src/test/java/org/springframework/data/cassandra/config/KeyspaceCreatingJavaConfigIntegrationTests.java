@@ -24,12 +24,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.cql.AbstractKeyspaceCreatingIntegrationTest;
-import org.springframework.data.cql.core.keyspace.CreateKeyspaceSpecification;
-import org.springframework.data.cql.core.keyspace.KeyspaceAttributes;
-import org.springframework.data.cql.core.keyspace.KeyspaceOption;
-import org.springframework.data.cql.support.AbstractTestJavaConfig;
-import org.springframework.data.cql.support.KeyspaceTestUtils;
+import org.springframework.data.cassandra.core.cql.keyspace.CreateKeyspaceSpecification;
+import org.springframework.data.cassandra.core.cql.keyspace.KeyspaceAttributes;
+import org.springframework.data.cassandra.core.cql.keyspace.KeyspaceOption;
+import org.springframework.data.cassandra.support.AbstractTestJavaConfig;
+import org.springframework.data.cassandra.support.KeyspaceTestUtils;
+import org.springframework.data.cassandra.test.util.AbstractKeyspaceCreatingIntegrationTest;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 

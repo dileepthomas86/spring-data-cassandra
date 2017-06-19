@@ -23,10 +23,10 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.data.cql.AbstractEmbeddedCassandraIntegrationTest;
-import org.springframework.data.cql.KeyspaceRule;
-import org.springframework.data.cql.core.CqlOperations;
-import org.springframework.data.cql.support.KeyspaceTestUtils;
+import org.springframework.data.cassandra.core.cql.CqlOperations;
+import org.springframework.data.cassandra.support.KeyspaceTestUtils;
+import org.springframework.data.cassandra.test.util.AbstractEmbeddedCassandraIntegrationTest;
+import org.springframework.data.cassandra.test.util.KeyspaceRule;
 
 import com.datastax.driver.core.Session;
 

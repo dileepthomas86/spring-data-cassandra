@@ -25,13 +25,13 @@ import java.util.Set;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.data.cql.core.keyspace.CreateKeyspaceSpecification;
-import org.springframework.data.cql.core.keyspace.DefaultOption;
-import org.springframework.data.cql.core.keyspace.DropKeyspaceSpecification;
-import org.springframework.data.cql.core.keyspace.KeyspaceActionSpecification;
-import org.springframework.data.cql.core.keyspace.KeyspaceOption;
-import org.springframework.data.cql.core.keyspace.KeyspaceOption.ReplicationStrategy;
-import org.springframework.data.cql.core.keyspace.Option;
+import org.springframework.data.cassandra.core.cql.keyspace.CreateKeyspaceSpecification;
+import org.springframework.data.cassandra.core.cql.keyspace.DefaultOption;
+import org.springframework.data.cassandra.core.cql.keyspace.DropKeyspaceSpecification;
+import org.springframework.data.cassandra.core.cql.keyspace.KeyspaceActionSpecification;
+import org.springframework.data.cassandra.core.cql.keyspace.KeyspaceOption;
+import org.springframework.data.cassandra.core.cql.keyspace.KeyspaceOption.ReplicationStrategy;
+import org.springframework.data.cassandra.core.cql.keyspace.Option;
 import org.springframework.util.Assert;
 
 /**

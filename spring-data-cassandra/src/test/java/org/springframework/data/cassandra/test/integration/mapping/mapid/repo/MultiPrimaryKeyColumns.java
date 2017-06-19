@@ -15,10 +15,10 @@
  */
 package org.springframework.data.cassandra.test.integration.mapping.mapid.repo;
 
+import org.springframework.data.cassandra.core.cql.PrimaryKeyType;
 import org.springframework.data.cassandra.core.mapping.Column;
 import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
 import org.springframework.data.cassandra.core.mapping.Table;
-import org.springframework.data.cql.core.PrimaryKeyType;
 
 /**
  * @author Matthew T. Adams

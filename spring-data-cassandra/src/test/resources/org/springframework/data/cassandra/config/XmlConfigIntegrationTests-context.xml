@@ -24,7 +24,7 @@
 
 	<bean name="testTimestampGenerator" class="com.datastax.driver.core.AtomicMonotonicTimestampGenerator"/>
 
-	<bean id="nettyOptions" class="org.springframework.data.cql.support.IntegrationTestNettyOptions"/>
+	<bean id="nettyOptions" class="org.springframework.data.cassandra.support.IntegrationTestNettyOptions"/>
 
 	<cassandra:cluster
 		cluster-name="skynet" contact-points="localhost" port="${build.cassandra.native_transport_port}"
@@ -64,7 +64,7 @@
 
 	<cassandra:session keyspace-name="xmlconfigtest"/>
 
-	<bean id="cassandraTemplate" class="org.springframework.data.cql.core.CqlTemplate">
+	<bean id="cassandraTemplate" class="org.springframework.data.cassandra.core.cql.CqlTemplate">
 		<constructor-arg ref="cassandraSession" />
 	</bean>
 

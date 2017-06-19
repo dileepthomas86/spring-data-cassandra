@@ -30,10 +30,10 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.cassandra.core.cql.SessionCallback;
 import org.springframework.data.cassandra.domain.Person;
-import org.springframework.data.cql.AbstractEmbeddedCassandraIntegrationTest;
-import org.springframework.data.cql.KeyspaceRule;
-import org.springframework.data.cql.core.SessionCallback;
+import org.springframework.data.cassandra.test.util.AbstractEmbeddedCassandraIntegrationTest;
+import org.springframework.data.cassandra.test.util.KeyspaceRule;
 
 import com.datastax.driver.core.Cluster;
 import com.datastax.driver.core.KeyspaceMetadata;

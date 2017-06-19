@@ -17,8 +17,9 @@ package org.springframework.data.cassandra.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.cql.core.session.DefaultSessionFactory;
-import org.springframework.data.cql.core.session.SessionFactory;
+import org.springframework.data.cassandra.core.cql.CqlTemplate;
+import org.springframework.data.cassandra.core.cql.session.DefaultSessionFactory;
+import org.springframework.data.cassandra.core.cql.session.SessionFactory;
 
 /**
  * Spring {@link @Configuration} class used to configure a Cassandra client application
@@ -55,7 +56,7 @@ public abstract class AbstractSessionConfiguration extends AbstractClusterConfig
 
 	/**
 	 * Creates a {@link DefaultSessionFactory} using the configured {@link #session()} to be used with
-	 * {@link org.springframework.data.cql.core.CqlTemplate}.
+	 * {@link CqlTemplate}.
 	 *
 	 * @return {@link SessionFactory} used to initialize the Template API.
 	 * @since 2.0

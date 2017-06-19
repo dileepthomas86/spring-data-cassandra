@@ -25,13 +25,13 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import org.springframework.data.cassandra.core.cql.CqlIdentifier;
+import org.springframework.data.cassandra.core.cql.generator.CreateTableCqlGenerator;
+import org.springframework.data.cassandra.core.cql.generator.CreateUserTypeCqlGenerator;
+import org.springframework.data.cassandra.core.cql.keyspace.CreateTableSpecification;
+import org.springframework.data.cassandra.core.cql.keyspace.CreateUserTypeSpecification;
 import org.springframework.data.cassandra.core.mapping.CassandraMappingContext;
 import org.springframework.data.cassandra.core.mapping.CassandraPersistentEntity;
-import org.springframework.data.cql.core.CqlIdentifier;
-import org.springframework.data.cql.core.generator.CreateTableCqlGenerator;
-import org.springframework.data.cql.core.generator.CreateUserTypeCqlGenerator;
-import org.springframework.data.cql.core.keyspace.CreateTableSpecification;
-import org.springframework.data.cql.core.keyspace.CreateUserTypeSpecification;
 import org.springframework.data.util.Optionals;
 import org.springframework.util.Assert;
 

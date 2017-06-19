@@ -22,7 +22,7 @@ import static org.mockito.Mockito.*;
 import static org.mockito.Mockito.anyString;
 
 import org.junit.Test;
-import org.springframework.data.cql.support.IntegrationTestNettyOptions;
+import org.springframework.data.cassandra.support.IntegrationTestNettyOptions;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import com.datastax.driver.core.*;

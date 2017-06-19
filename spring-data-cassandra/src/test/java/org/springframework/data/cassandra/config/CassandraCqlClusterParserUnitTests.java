@@ -18,7 +18,7 @@ package org.springframework.data.cassandra.config;
 import static org.assertj.core.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.*;
-import static org.springframework.data.cql.support.BeanDefinitionTestUtils.*;
+import static org.springframework.data.cassandra.support.BeanDefinitionTestUtils.*;
 
 import java.util.List;
 

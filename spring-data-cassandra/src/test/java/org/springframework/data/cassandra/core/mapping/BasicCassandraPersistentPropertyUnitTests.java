@@ -24,7 +24,7 @@ import java.util.Date;
 
 import org.junit.Test;
 import org.springframework.core.annotation.AliasFor;
-import org.springframework.data.cql.core.CqlIdentifier;
+import org.springframework.data.cassandra.core.cql.CqlIdentifier;
 import org.springframework.data.mapping.model.Property;
 import org.springframework.data.util.ClassTypeInformation;
 import org.springframework.util.ReflectionUtils;

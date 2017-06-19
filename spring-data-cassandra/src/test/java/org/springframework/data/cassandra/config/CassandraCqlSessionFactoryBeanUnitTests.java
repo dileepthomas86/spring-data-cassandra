@@ -35,7 +35,7 @@ import org.junit.runner.RunWith;
 import org.mockito.InOrder;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
-import org.springframework.data.cql.core.CqlOperations;
+import org.springframework.data.cassandra.core.cql.CqlOperations;
 
 import com.datastax.driver.core.Cluster;
 import com.datastax.driver.core.Session;

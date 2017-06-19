@@ -28,7 +28,6 @@ import org.springframework.dao.DataAccessResourceFailureException;
 import org.springframework.dao.TransientDataAccessResourceException;
 import org.springframework.data.cassandra.*;
 import org.springframework.data.cassandra.CassandraSchemaElementExistsException.ElementType;
-import org.springframework.data.cassandra.cql.CassandraExceptionTranslator;
 import org.springframework.util.ClassUtils;
 
 import com.datastax.driver.core.ConsistencyLevel;

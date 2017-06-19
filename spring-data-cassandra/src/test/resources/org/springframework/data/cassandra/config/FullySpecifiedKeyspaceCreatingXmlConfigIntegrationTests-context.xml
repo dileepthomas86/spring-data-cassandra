@@ -10,7 +10,7 @@
 	<context:property-placeholder
 			location="classpath:/config/cassandra-connection.properties,classpath:/org/springframework/data/cassandra/config/FullySpecifiedKeyspaceCreatingXmlConfigIntegrationTests.properties"/>
 
-	<bean id="nettyOptions" class="org.springframework.data.cql.support.IntegrationTestNettyOptions"/>
+	<bean id="nettyOptions" class="org.springframework.data.cassandra.support.IntegrationTestNettyOptions"/>
 
 	<cass:cluster port="${build.cassandra.native_transport_port}" compression="LZ4" netty-options-ref="nettyOptions">
 		<cass:keyspace action="CREATE_DROP" durable-writes="true"

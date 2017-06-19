@@ -23,13 +23,13 @@ import org.junit.Before;
 import org.junit.Test;
 import org.springframework.data.cassandra.core.CassandraOperations;
 import org.springframework.data.cassandra.core.CassandraTemplate;
+import org.springframework.data.cassandra.core.cql.PrimaryKeyType;
 import org.springframework.data.cassandra.core.mapping.Column;
 import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
 import org.springframework.data.cassandra.core.mapping.Table;
 import org.springframework.data.cassandra.repository.MapId;
 import org.springframework.data.cassandra.repository.support.SchemaTestUtils;
-import org.springframework.data.cql.AbstractKeyspaceCreatingIntegrationTest;
-import org.springframework.data.cql.core.PrimaryKeyType;
+import org.springframework.data.cassandra.test.util.AbstractKeyspaceCreatingIntegrationTest;
 
 /**
  * Integration tests for {@link org.springframework.data.cassandra.core.CassandraTemplate} with {@link MapId}.

@@ -17,7 +17,7 @@
 package org.springframework.data.cassandra.config;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.springframework.data.cql.support.BeanDefinitionTestUtils.*;
+import static org.springframework.data.cassandra.support.BeanDefinitionTestUtils.*;
 
 import org.junit.Rule;
 import org.junit.Test;

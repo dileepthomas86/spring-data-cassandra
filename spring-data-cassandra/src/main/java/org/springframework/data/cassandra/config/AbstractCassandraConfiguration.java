@@ -27,12 +27,12 @@ import org.springframework.data.cassandra.core.CassandraAdminTemplate;
 import org.springframework.data.cassandra.core.convert.CassandraConverter;
 import org.springframework.data.cassandra.core.convert.CassandraCustomConversions;
 import org.springframework.data.cassandra.core.convert.MappingCassandraConverter;
+import org.springframework.data.cassandra.core.cql.session.DefaultSessionFactory;
+import org.springframework.data.cassandra.core.cql.session.SessionFactory;
 import org.springframework.data.cassandra.core.mapping.CassandraMappingContext;
 import org.springframework.data.cassandra.core.mapping.SimpleUserTypeResolver;
 import org.springframework.data.cassandra.core.mapping.Table;
 import org.springframework.data.convert.CustomConversions;
-import org.springframework.data.cql.core.session.DefaultSessionFactory;
-import org.springframework.data.cql.core.session.SessionFactory;
 import org.springframework.data.mapping.context.MappingContext;
 
 /**

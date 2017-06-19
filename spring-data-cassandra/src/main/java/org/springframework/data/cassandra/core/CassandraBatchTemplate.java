@@ -18,7 +18,7 @@ package org.springframework.data.cassandra.core;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import org.springframework.data.cql.core.WriteOptions;
+import org.springframework.data.cassandra.core.cql.WriteOptions;
 import org.springframework.util.Assert;
 
 import com.datastax.driver.core.querybuilder.Batch;
@@ -102,7 +102,7 @@ class CassandraBatchTemplate implements CassandraBatchOperations {
 	}
 
 	/* (non-Javadoc)
-	 * @see org.springframework.data.cassandra.core.CassandraBatchOperations#insert(java.lang.Iterable, org.springframework.data.cql.core.WriteOptions)
+	 * @see org.springframework.data.cassandra.core.CassandraBatchOperations#insert(java.lang.Iterable, org.springframework.data.cassandra.core.cql.WriteOptions)
 	 */
 	@Override
 	public CassandraBatchOperations insert(Iterable<?> entities, WriteOptions options) {
@@ -140,7 +140,7 @@ class CassandraBatchTemplate implements CassandraBatchOperations {
 	}
 
 	/* (non-Javadoc)
-	 * @see org.springframework.data.cassandra.core.CassandraBatchOperations#update(java.lang.Iterable, org.springframework.data.cql.core.WriteOptions)
+	 * @see org.springframework.data.cassandra.core.CassandraBatchOperations#update(java.lang.Iterable, org.springframework.data.cassandra.core.cql.WriteOptions)
 	 */
 	@Override
 	public CassandraBatchOperations update(Iterable<?> entities, WriteOptions options) {

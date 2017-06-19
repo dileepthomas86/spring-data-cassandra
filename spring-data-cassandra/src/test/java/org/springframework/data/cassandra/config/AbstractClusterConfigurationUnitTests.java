@@ -24,8 +24,8 @@ import java.util.Collections;
 import java.util.List;
 
 import org.junit.Test;
-import org.springframework.data.cql.core.keyspace.CreateKeyspaceSpecification;
-import org.springframework.data.cql.core.keyspace.DropKeyspaceSpecification;
+import org.springframework.data.cassandra.core.cql.keyspace.CreateKeyspaceSpecification;
+import org.springframework.data.cassandra.core.cql.keyspace.DropKeyspaceSpecification;
 
 import com.datastax.driver.core.AuthProvider;
 import com.datastax.driver.core.Cluster;

@@ -16,7 +16,7 @@
 package org.springframework.data.cassandra.config;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.data.cql.core.CqlTemplate;
+import org.springframework.data.cassandra.core.cql.CqlTemplate;
 
 /**
  * Abstract configuration class to create a {@link CqlTemplate} and inheriting {@link com.datastax.driver.core.Session}

@@ -23,9 +23,9 @@ import org.junit.Test;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.cql.AbstractEmbeddedCassandraIntegrationTest;
-import org.springframework.data.cql.core.CqlTemplate;
-import org.springframework.data.cql.support.IntegrationTestNettyOptions;
+import org.springframework.data.cassandra.core.cql.CqlTemplate;
+import org.springframework.data.cassandra.support.IntegrationTestNettyOptions;
+import org.springframework.data.cassandra.test.util.AbstractEmbeddedCassandraIntegrationTest;
 
 import com.datastax.driver.core.NettyOptions;
 import com.datastax.driver.core.Session;

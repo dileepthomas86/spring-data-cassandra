@@ -24,20 +24,20 @@ import org.springframework.data.cassandra.core.convert.CassandraConverter;
 import org.springframework.data.cassandra.core.convert.MappingCassandraConverter;
 import org.springframework.data.cassandra.core.convert.QueryMapper;
 import org.springframework.data.cassandra.core.convert.UpdateMapper;
+import org.springframework.data.cassandra.core.cql.CqlIdentifier;
+import org.springframework.data.cassandra.core.cql.CqlProvider;
+import org.springframework.data.cassandra.core.cql.QueryOptions;
+import org.springframework.data.cassandra.core.cql.ReactiveCqlOperations;
+import org.springframework.data.cassandra.core.cql.ReactiveCqlTemplate;
+import org.springframework.data.cassandra.core.cql.ReactiveSessionCallback;
+import org.springframework.data.cassandra.core.cql.session.DefaultReactiveSessionFactory;
+import org.springframework.data.cassandra.core.cql.session.ReactiveResultSet;
+import org.springframework.data.cassandra.core.cql.session.ReactiveSession;
+import org.springframework.data.cassandra.core.cql.session.ReactiveSessionFactory;
 import org.springframework.data.cassandra.core.mapping.CassandraMappingContext;
 import org.springframework.data.cassandra.core.mapping.CassandraPersistentEntity;
 import org.springframework.data.cassandra.core.mapping.CassandraPersistentProperty;
 import org.springframework.data.cassandra.core.query.Query;
-import org.springframework.data.cql.core.CqlIdentifier;
-import org.springframework.data.cql.core.CqlProvider;
-import org.springframework.data.cql.core.QueryOptions;
-import org.springframework.data.cql.core.ReactiveCqlOperations;
-import org.springframework.data.cql.core.ReactiveCqlTemplate;
-import org.springframework.data.cql.core.ReactiveSessionCallback;
-import org.springframework.data.cql.core.session.DefaultReactiveSessionFactory;
-import org.springframework.data.cql.core.session.ReactiveResultSet;
-import org.springframework.data.cql.core.session.ReactiveSession;
-import org.springframework.data.cql.core.session.ReactiveSessionFactory;
 import org.springframework.data.mapping.context.MappingContext;
 import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;
@@ -514,7 +514,7 @@ public class ReactiveCassandraTemplate implements ReactiveCassandraOperations {
 
 	/*
 	 * (non-Javadoc)
-	 * @see org.springframework.data.cassandra.core.ReactiveCassandraOperations#delete(java.lang.Object, org.springframework.data.cql.core.QueryOptions)
+	 * @see org.springframework.data.cassandra.core.ReactiveCassandraOperations#delete(java.lang.Object, org.springframework.data.cassandra.core.cql.QueryOptions)
 	 */
 	@Override
 	public <T> Mono<T> delete(T entity, QueryOptions options) {
@@ -551,7 +551,7 @@ public class ReactiveCassandraTemplate implements ReactiveCassandraOperations {
 
 	/*
 	 * (non-Javadoc)
-	 * @see org.springframework.data.cassandra.core.ReactiveCassandraOperations#delete(org.reactivestreams.Publisher, org.springframework.data.cql.core.QueryOptions)
+	 * @see org.springframework.data.cassandra.core.ReactiveCassandraOperations#delete(org.reactivestreams.Publisher, org.springframework.data.cassandra.core.cql.QueryOptions)
 	 */
 	@Override
 	public <T> Flux<T> delete(Publisher<? extends T> entities, QueryOptions options) {

@@ -17,7 +17,7 @@ package org.springframework.data.cassandra.config;
 
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.data.cql.core.CqlTemplate;
+import org.springframework.data.cassandra.core.cql.CqlTemplate;
 import org.springframework.util.Assert;
 
 import com.datastax.driver.core.Session;
