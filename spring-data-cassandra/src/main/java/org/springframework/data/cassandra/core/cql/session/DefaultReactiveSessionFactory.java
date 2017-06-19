@@ -15,6 +15,8 @@
  */
 package org.springframework.data.cassandra.core.cql.session;
 
+import org.springframework.data.cassandra.ReactiveSession;
+import org.springframework.data.cassandra.ReactiveSessionFactory;
 import org.springframework.data.cassandra.core.cql.ReactiveRowMapperResultSetExtractor;
 
 /**

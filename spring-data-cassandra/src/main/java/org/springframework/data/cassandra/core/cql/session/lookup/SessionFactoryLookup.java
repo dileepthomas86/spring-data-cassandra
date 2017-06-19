@@ -15,10 +15,10 @@
  */
 package org.springframework.data.cassandra.core.cql.session.lookup;
 
-import org.springframework.data.cassandra.core.cql.session.SessionFactory;
+import org.springframework.data.cassandra.SessionFactory;
 
 /**
- * Strategy interface for looking up {@link org.springframework.data.cassandra.core.cql.session.SessionFactory} by name.
+ * Strategy interface for looking up {@link SessionFactory} by name.
  * <p>
  * Implementing classes resolve session factories keyed by {@link String} from an underlying source such as a
  * {@link java.util.Map} or the {@link org.springframework.beans.factory.BeanFactory}.

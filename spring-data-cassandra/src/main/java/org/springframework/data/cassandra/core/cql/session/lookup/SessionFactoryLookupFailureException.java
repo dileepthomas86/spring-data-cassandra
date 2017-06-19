@@ -16,10 +16,11 @@
 package org.springframework.data.cassandra.core.cql.session.lookup;
 
 import org.springframework.dao.NonTransientDataAccessException;
+import org.springframework.data.cassandra.SessionFactory;
 
 /**
  * Exception to be thrown by a {@link SessionFactoryLookup} implementation, indicating that the specified
- * {@link org.springframework.data.cassandra.core.cql.session.SessionFactory} could not be obtained.
+ * {@link SessionFactory} could not be obtained.
  *
  * @author Mark Paluch
  * @since 2.0

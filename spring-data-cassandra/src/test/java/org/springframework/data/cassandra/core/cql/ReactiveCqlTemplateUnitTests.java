@@ -36,10 +36,10 @@ import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.dao.IncorrectResultSizeDataAccessException;
 import org.springframework.data.cassandra.CassandraConnectionFailureException;
 import org.springframework.data.cassandra.CassandraInvalidQueryException;
+import org.springframework.data.cassandra.ReactiveResultSet;
+import org.springframework.data.cassandra.ReactiveSession;
+import org.springframework.data.cassandra.ReactiveSessionFactory;
 import org.springframework.data.cassandra.core.cql.session.DefaultReactiveSessionFactory;
-import org.springframework.data.cassandra.core.cql.session.ReactiveResultSet;
-import org.springframework.data.cassandra.core.cql.session.ReactiveSession;
-import org.springframework.data.cassandra.core.cql.session.ReactiveSessionFactory;
 
 import com.datastax.driver.core.BoundStatement;
 import com.datastax.driver.core.ColumnDefinitions;

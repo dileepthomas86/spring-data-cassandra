@@ -17,7 +17,7 @@ package org.springframework.data.cassandra.core.cql;
 
 import reactor.core.publisher.Mono;
 
-import org.springframework.data.cassandra.core.cql.session.ReactiveSession;
+import org.springframework.data.cassandra.ReactiveSession;
 
 import com.datastax.driver.core.PreparedStatement;
 import com.datastax.driver.core.exceptions.DriverException;

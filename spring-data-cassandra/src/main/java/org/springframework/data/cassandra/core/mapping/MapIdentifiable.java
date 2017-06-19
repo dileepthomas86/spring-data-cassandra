@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2017 the original author or authors.
+ * Copyright 2017 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,12 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.data.cassandra.test.integration.mapping.mapid.repo;
-
-import org.springframework.data.cassandra.repository.MapIdCassandraRepository;
+package org.springframework.data.cassandra.core.mapping;
 
 /**
+ * Interface that entity classes may choose to implement in order to allow a client of the entity to easily get the
+ * entity's {@link MapId}.
+ *
  * @author Matthew T. Adams
- * @author Mark Paluch
  */
-public interface MultiPrimaryKeyColumnsRepository extends MapIdCassandraRepository<MultiPrimaryKeyColumns> {}
+public interface MapIdentifiable {
+
+	/**
+	 * Gets the identity of this instance. Throws {@link IllegalStateException} if this instance does not use
+	 * {@link MapId}.
+	 */
+	MapId getMapId();
+}

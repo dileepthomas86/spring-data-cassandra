@@ -19,8 +19,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.dao.DataAccessException;
-import org.springframework.data.cassandra.core.cql.session.ReactiveSession;
-import org.springframework.data.cassandra.core.cql.session.ReactiveSessionFactory;
+import org.springframework.data.cassandra.ReactiveSession;
+import org.springframework.data.cassandra.ReactiveSessionFactory;
 import org.springframework.util.Assert;
 
 import com.datastax.driver.core.exceptions.DriverException;

@@ -23,8 +23,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.dao.DataAccessException;
+import org.springframework.data.cassandra.SessionFactory;
 import org.springframework.data.cassandra.core.cql.session.DefaultSessionFactory;
-import org.springframework.data.cassandra.core.cql.session.SessionFactory;
 import org.springframework.util.Assert;
 
 import com.datastax.driver.core.ConsistencyLevel;

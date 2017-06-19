@@ -23,8 +23,8 @@ import reactor.test.StepVerifier;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.data.cassandra.ReactiveResultSet;
 import org.springframework.data.cassandra.core.cql.session.DefaultBridgedReactiveSession;
-import org.springframework.data.cassandra.core.cql.session.ReactiveResultSet;
 import org.springframework.data.cassandra.test.util.AbstractKeyspaceCreatingIntegrationTest;
 
 import com.datastax.driver.core.KeyspaceMetadata;

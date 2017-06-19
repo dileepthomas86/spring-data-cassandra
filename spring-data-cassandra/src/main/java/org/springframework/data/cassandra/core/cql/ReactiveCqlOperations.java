@@ -23,7 +23,7 @@ import java.util.Map;
 import org.reactivestreams.Publisher;
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.IncorrectResultSizeDataAccessException;
-import org.springframework.data.cassandra.core.cql.session.ReactiveResultSet;
+import org.springframework.data.cassandra.ReactiveResultSet;
 
 import com.datastax.driver.core.PreparedStatement;
 import com.datastax.driver.core.Row;

@@ -19,7 +19,7 @@ import static org.assertj.core.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 import org.junit.Test;
-import org.springframework.data.cassandra.core.cql.session.SessionFactory;
+import org.springframework.data.cassandra.SessionFactory;
 import org.springframework.data.cassandra.core.cql.session.lookup.SingleSessionFactoryLookup;
 
 /**

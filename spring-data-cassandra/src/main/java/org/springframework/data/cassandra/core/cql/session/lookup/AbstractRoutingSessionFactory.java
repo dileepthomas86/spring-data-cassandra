@@ -19,15 +19,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.data.cassandra.core.cql.session.SessionFactory;
+import org.springframework.data.cassandra.SessionFactory;
 import org.springframework.util.Assert;
 
 import com.datastax.driver.core.Session;
 
 /**
- * Abstract {@link org.springframework.data.cassandra.core.cql.session.SessionFactory} implementation that routes
- * {@link #getSession()} calls to one of various target {@link SessionFactory factories} based on a lookup key. The
- * latter is usually (but not necessarily) determined through some thread-bound transaction context.
+ * Abstract {@link SessionFactory} implementation that routes {@link #getSession()} calls to one of various target
+ * {@link SessionFactory factories} based on a lookup key. The latter is usually (but not necessarily) determined
+ * through some thread-bound transaction context.
  *
  * @author Mark Paluch
  * @since 2.0

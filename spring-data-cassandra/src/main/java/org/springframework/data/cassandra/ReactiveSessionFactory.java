@@ -13,9 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.data.cassandra.core.cql.session;
-
-import org.springframework.data.cassandra.core.cql.ReactiveCqlTemplate;
+package org.springframework.data.cassandra;
 
 /**
  * Strategy interface to produce {@link ReactiveSession} instances.
@@ -27,8 +25,8 @@ import org.springframework.data.cassandra.core.cql.ReactiveCqlTemplate;
  * @author Mark Paluch
  * @see 2.0
  * @see ReactiveSession
- * @see DefaultReactiveSessionFactory
- * @see ReactiveCqlTemplate
+ * @see org.springframework.data.cassandra.core.cql.session.DefaultReactiveSessionFactory
+ * @see org.springframework.data.cassandra.core.cql.ReactiveCqlTemplate
  */
 public interface ReactiveSessionFactory {
 

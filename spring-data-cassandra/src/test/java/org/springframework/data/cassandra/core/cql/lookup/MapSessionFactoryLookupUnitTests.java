@@ -23,7 +23,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
-import org.springframework.data.cassandra.core.cql.session.SessionFactory;
+import org.springframework.data.cassandra.SessionFactory;
 import org.springframework.data.cassandra.core.cql.session.lookup.MapSessionFactoryLookup;
 import org.springframework.data.cassandra.core.cql.session.lookup.SessionFactoryLookupFailureException;
 

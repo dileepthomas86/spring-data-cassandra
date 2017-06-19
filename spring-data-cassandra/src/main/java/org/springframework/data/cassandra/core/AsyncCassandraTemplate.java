@@ -21,6 +21,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 
 import org.springframework.dao.DataAccessException;
+import org.springframework.data.cassandra.SessionFactory;
 import org.springframework.data.cassandra.core.convert.CassandraConverter;
 import org.springframework.data.cassandra.core.convert.MappingCassandraConverter;
 import org.springframework.data.cassandra.core.convert.QueryMapper;
@@ -34,7 +35,6 @@ import org.springframework.data.cassandra.core.cql.CqlProvider;
 import org.springframework.data.cassandra.core.cql.GuavaListenableFutureAdapter;
 import org.springframework.data.cassandra.core.cql.QueryOptions;
 import org.springframework.data.cassandra.core.cql.session.DefaultSessionFactory;
-import org.springframework.data.cassandra.core.cql.session.SessionFactory;
 import org.springframework.data.cassandra.core.mapping.CassandraMappingContext;
 import org.springframework.data.cassandra.core.mapping.CassandraPersistentEntity;
 import org.springframework.data.cassandra.core.mapping.CassandraPersistentProperty;

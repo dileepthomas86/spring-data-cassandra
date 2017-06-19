@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.data.cassandra.repository.support;
+package org.springframework.data.cassandra.core.mapping;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -21,7 +21,6 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import org.springframework.data.cassandra.repository.MapId;
 import org.springframework.util.StringUtils;
 
 /**

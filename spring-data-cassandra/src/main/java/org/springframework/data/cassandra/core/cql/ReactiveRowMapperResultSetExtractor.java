@@ -19,7 +19,7 @@ import reactor.core.publisher.Mono;
 
 import org.reactivestreams.Publisher;
 import org.springframework.dao.DataAccessException;
-import org.springframework.data.cassandra.core.cql.session.ReactiveResultSet;
+import org.springframework.data.cassandra.ReactiveResultSet;
 import org.springframework.util.Assert;
 
 import com.datastax.driver.core.exceptions.DriverException;

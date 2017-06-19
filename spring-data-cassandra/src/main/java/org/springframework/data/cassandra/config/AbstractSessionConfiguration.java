@@ -17,9 +17,9 @@ package org.springframework.data.cassandra.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.cassandra.SessionFactory;
 import org.springframework.data.cassandra.core.cql.CqlTemplate;
 import org.springframework.data.cassandra.core.cql.session.DefaultSessionFactory;
-import org.springframework.data.cassandra.core.cql.session.SessionFactory;
 
 /**
  * Spring {@link @Configuration} class used to configure a Cassandra client application

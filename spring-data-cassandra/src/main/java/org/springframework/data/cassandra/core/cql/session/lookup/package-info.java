@@ -1,5 +1,5 @@
 /**
- * Provides a strategy for looking up {@link org.springframework.data.cassandra.core.cql.session.SessionFactory}.
+ * Provides a strategy for looking up {@link org.springframework.data.cassandra.SessionFactory}.
  *
  * @author Mark Paluch
  */

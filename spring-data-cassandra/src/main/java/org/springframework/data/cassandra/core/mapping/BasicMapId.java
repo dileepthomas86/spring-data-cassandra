@@ -13,16 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.data.cassandra.repository.support;
+package org.springframework.data.cassandra.core.mapping;
 
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import org.springframework.data.cassandra.core.mapping.CassandraPersistentEntity;
-import org.springframework.data.cassandra.core.mapping.CassandraPersistentProperty;
-import org.springframework.data.cassandra.repository.MapId;
 import org.springframework.util.Assert;
 
 /**
@@ -84,7 +81,7 @@ public class BasicMapId implements MapId {
 	}
 
 	/* (non-Javadoc)
-	 * @see org.springframework.data.cassandra.repository.MapId#with(java.lang.String, java.io.Object)
+	 * @see org.springframework.data.cassandra.core.mapping.MapId#with(java.lang.String, java.io.Object)
 	 */
 	@Override
 	public BasicMapId with(String name, Object value) {

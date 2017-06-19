@@ -24,9 +24,9 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.data.cassandra.ReactiveSession;
 import org.springframework.data.cassandra.core.cql.session.DefaultBridgedReactiveSession;
 import org.springframework.data.cassandra.core.cql.session.DefaultReactiveSessionFactory;
-import org.springframework.data.cassandra.core.cql.session.ReactiveSession;
 import org.springframework.data.cassandra.test.util.AbstractKeyspaceCreatingIntegrationTest;
 
 import com.datastax.driver.core.querybuilder.QueryBuilder;

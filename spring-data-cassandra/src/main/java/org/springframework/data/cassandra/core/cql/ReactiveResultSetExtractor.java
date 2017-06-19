@@ -17,7 +17,7 @@ package org.springframework.data.cassandra.core.cql;
 
 import org.reactivestreams.Publisher;
 import org.springframework.dao.DataAccessException;
-import org.springframework.data.cassandra.core.cql.session.ReactiveResultSet;
+import org.springframework.data.cassandra.ReactiveResultSet;
 
 import com.datastax.driver.core.exceptions.DriverException;
 

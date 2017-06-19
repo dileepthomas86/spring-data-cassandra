@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2017 the original author or authors.
+ * Copyright 2017 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,30 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-package org.springframework.data.cassandra.test.integration.mapping.mapid.template;
+package org.springframework.data.cassandra.core;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.springframework.data.cassandra.repository.support.BasicMapId.*;
+import static org.springframework.data.cassandra.core.mapping.MapIdFactory.*;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.springframework.data.cassandra.core.CassandraOperations;
-import org.springframework.data.cassandra.core.CassandraTemplate;
 import org.springframework.data.cassandra.core.cql.PrimaryKeyType;
 import org.springframework.data.cassandra.core.mapping.Column;
+import org.springframework.data.cassandra.core.mapping.MapId;
 import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
 import org.springframework.data.cassandra.core.mapping.Table;
-import org.springframework.data.cassandra.repository.MapId;
 import org.springframework.data.cassandra.repository.support.SchemaTestUtils;
 import org.springframework.data.cassandra.test.util.AbstractKeyspaceCreatingIntegrationTest;
 
 /**
- * Integration tests for {@link org.springframework.data.cassandra.core.CassandraTemplate} with {@link MapId}.
+ * Integration tests for {@link org.springframework.data.cassandra.core.CassandraTemplate} using {@link MapId}.
  *
  * @author Matthew T. Adams
+ * @author Mark Paluch
  */
-public class CassandraTemplateMapIdIntegrationTest extends AbstractKeyspaceCreatingIntegrationTest {
+public class CassandraTemplateMapIdProxyDelegateIntegrationTests extends AbstractKeyspaceCreatingIntegrationTest {
 
 	CassandraOperations operations;
 
@@ -62,7 +60,7 @@ public class CassandraTemplateMapIdIntegrationTest extends AbstractKeyspaceCreat
 		assertThat(inserted).isSameAs(saved);
 
 		// select
-		MapId id = id("key", saved.getKey());
+		SinglePkcId id = id(SinglePkcId.class).key(saved.getKey());
 		SinglePkc selected = operations.selectOneById(id, SinglePkc.class);
 		assertThat(saved).isNotSameAs(selected);
 		assertThat(selected.getKey()).isEqualTo(saved.getKey());
@@ -80,6 +78,12 @@ public class CassandraTemplateMapIdIntegrationTest extends AbstractKeyspaceCreat
 		// delete
 		operations.delete(selected);
 		assertThat(operations.selectOneById(id, SinglePkc.class)).isNull();
+	}
+
+	public interface SinglePkcId {
+		SinglePkcId key(String key);
+
+		String key();
 	}
 
 	@Table
@@ -120,7 +124,7 @@ public class CassandraTemplateMapIdIntegrationTest extends AbstractKeyspaceCreat
 		assertThat(inserted).isSameAs(saved);
 
 		// select
-		MapId id = id("key0", saved.getKey0()).with("key1", saved.getKey1());
+		MultiPkcId id = id(MultiPkcId.class).key0(saved.getKey0()).key1(saved.getKey1());
 		MultiPkc selected = operations.selectOneById(id, MultiPkc.class);
 		assertThat(saved).isNotSameAs(selected);
 		assertThat(selected.getKey0()).isEqualTo(saved.getKey0());
@@ -139,6 +143,16 @@ public class CassandraTemplateMapIdIntegrationTest extends AbstractKeyspaceCreat
 		// delete
 		operations.delete(selected);
 		assertThat(operations.selectOneById(id, MultiPkc.class)).isNull();
+	}
+
+	public interface MultiPkcId {
+		MultiPkcId key0(String key0);
+
+		String key0();
+
+		MultiPkcId key1(String key1);
+
+		String key1();
 	}
 
 	@Table

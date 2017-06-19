@@ -15,6 +15,7 @@
  */
 package org.springframework.data.cassandra.core.cql.session;
 
+import org.springframework.data.cassandra.SessionFactory;
 import org.springframework.util.Assert;
 
 import com.datastax.driver.core.Session;
@@ -46,7 +47,7 @@ public class DefaultSessionFactory implements SessionFactory {
 	}
 
 	/* (non-Javadoc)
-	 * @see org.springframework.data.cassandra.core.cql.session.SessionFactory#getSession()
+	 * @see org.springframework.data.cassandra.session.SessionFactory#getSession()
 	 */
 	@Override
 	public Session getSession() {

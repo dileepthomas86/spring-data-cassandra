@@ -17,7 +17,7 @@ package org.springframework.data.cassandra.core.convert;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.Assume.*;
-import static org.springframework.data.cassandra.repository.support.BasicMapId.*;
+import static org.springframework.data.cassandra.core.mapping.BasicMapId.*;
 import static org.springframework.data.cassandra.test.util.RowMockUtil.*;
 
 import lombok.AllArgsConstructor;

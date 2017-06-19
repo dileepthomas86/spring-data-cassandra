@@ -18,6 +18,7 @@ package org.springframework.data.cassandra.core;
 import java.util.Map;
 import java.util.Optional;
 
+import org.springframework.data.cassandra.SessionFactory;
 import org.springframework.data.cassandra.core.convert.CassandraConverter;
 import org.springframework.data.cassandra.core.cql.CqlIdentifier;
 import org.springframework.data.cassandra.core.cql.SessionCallback;
@@ -27,7 +28,6 @@ import org.springframework.data.cassandra.core.cql.generator.DropUserTypeCqlGene
 import org.springframework.data.cassandra.core.cql.keyspace.CreateTableSpecification;
 import org.springframework.data.cassandra.core.cql.keyspace.DropTableSpecification;
 import org.springframework.data.cassandra.core.cql.keyspace.DropUserTypeSpecification;
-import org.springframework.data.cassandra.core.cql.session.SessionFactory;
 import org.springframework.data.cassandra.core.mapping.CassandraPersistentEntity;
 import org.springframework.util.Assert;
 

@@ -25,10 +25,10 @@ import java.util.function.Function;
 import org.reactivestreams.Publisher;
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.support.DataAccessUtils;
+import org.springframework.data.cassandra.ReactiveResultSet;
+import org.springframework.data.cassandra.ReactiveSession;
+import org.springframework.data.cassandra.ReactiveSessionFactory;
 import org.springframework.data.cassandra.core.cql.session.DefaultReactiveSessionFactory;
-import org.springframework.data.cassandra.core.cql.session.ReactiveResultSet;
-import org.springframework.data.cassandra.core.cql.session.ReactiveSession;
-import org.springframework.data.cassandra.core.cql.session.ReactiveSessionFactory;
 import org.springframework.util.Assert;
 
 import com.datastax.driver.core.BoundStatement;

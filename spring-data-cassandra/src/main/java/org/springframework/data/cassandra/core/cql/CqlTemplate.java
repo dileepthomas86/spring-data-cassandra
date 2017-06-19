@@ -23,7 +23,7 @@ import java.util.function.Function;
 
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.support.DataAccessUtils;
-import org.springframework.data.cassandra.core.cql.session.SessionFactory;
+import org.springframework.data.cassandra.SessionFactory;
 import org.springframework.util.Assert;
 
 import com.datastax.driver.core.BoundStatement;

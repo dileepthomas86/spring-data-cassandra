@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2017 the original author or authors.
+ * Copyright 2017 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,33 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.data.cassandra.repository.support;
+package org.springframework.data.cassandra.core.mapping;
 
-import static org.assertj.core.api.Assertions.*;
-
-import java.util.HashMap;
 import java.util.Map;
 
-import org.junit.Test;
-
 /**
- * Unit tests for {@link BasicMapId}.
+ * Interface that represents the id of a persistent entity, where the keys correspond to the entity's JavaBean
+ * properties.
  *
  * @author Matthew T. Adams
  * @author Mark Paluch
  */
-public class BasicMapIdUnitTests {
+public interface MapId extends Map<String, Object> {
 
-	@Test
-	public void testMapConstructor() {
-
-		Map<String, Object> map = new HashMap<>();
-		map.put("field1", "value1");
-		map.put("field2", 2);
-
-		BasicMapId basicMapId = new BasicMapId(map);
-
-		assertThat(map.get("field1")).isEqualTo(basicMapId.get("field1"));
-		assertThat(map.get("field2")).isEqualTo(basicMapId.get("field2"));
-	}
+	/**
+	 * Builder method that adds the value for the named property, then returns {@code this}.
+	 *
+	 * @param name The property name containing the value.
+	 * @param value The property value.
+	 * @return {@code this}
+	 */
+	MapId with(String name, Object value);
 }

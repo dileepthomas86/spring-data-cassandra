@@ -18,14 +18,13 @@ package org.springframework.data.cassandra.core.cql.session.lookup;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
-import org.springframework.data.cassandra.core.cql.session.SessionFactory;
+import org.springframework.data.cassandra.SessionFactory;
 import org.springframework.util.Assert;
 
 /**
  * {@link SessionFactoryLookup} implementation based on a Spring {@link BeanFactory}.
  * <p>
- * Will lookup Spring managed beans identified by bean name, expecting them to be of type
- * {@link org.springframework.data.cassandra.core.cql.session.SessionFactory}.
+ * Will lookup Spring managed beans identified by bean name, expecting them to be of type {@link SessionFactory}.
  *
  * @author Mark Paluch
  * @since 2.0
@@ -51,8 +50,7 @@ public class BeanFactorySessionFactoryLookup implements SessionFactoryLookup, Be
 	 * {@link BeanFactory} will be replaced by the {@link BeanFactory} that creates it ({@link BeanFactoryAware}
 	 * contract). So only use this constructor if you are using this class outside the context of a Spring IoC container.
 	 *
-	 * @param beanFactory the bean factory to be used to lookup
-	 *          {@link org.springframework.data.cassandra.core.cql.session.SessionFactory session factories}, must not be
+	 * @param beanFactory the bean factory to be used to lookup {@link SessionFactory session factories}, must not be
 	 *          {@literal null}.
 	 */
 	public BeanFactorySessionFactoryLookup(BeanFactory beanFactory) {

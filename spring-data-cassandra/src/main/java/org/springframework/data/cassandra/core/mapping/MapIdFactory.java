@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.data.cassandra.repository.support;
+package org.springframework.data.cassandra.core.mapping;
 
 import java.lang.reflect.Proxy;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.springframework.data.cassandra.repository.MapId;
+import org.springframework.data.cassandra.repository.support.IdInterfaceValidator;
 import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;
 
