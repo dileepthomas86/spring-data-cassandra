@@ -194,7 +194,8 @@ to the com.datastax.driver.core.Cluster.Builder.
 				<xsd:annotation>
 					<xsd:appinfo>
 						<tool:annotation kind="ref">
-							<tool:assignable-to type="org.springframework.data.cql.config.ClusterBuilderConfigurer"/>
+							<tool:assignable-to
+									type="org.springframework.data.cassandra.config.ClusterBuilderConfigurer"/>
 						</tool:annotation>
 					</xsd:appinfo>
 				</xsd:annotation>

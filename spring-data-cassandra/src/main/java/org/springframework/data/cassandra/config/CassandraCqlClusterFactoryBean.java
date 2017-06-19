@@ -13,16 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package org.springframework.data.cassandra.config;
 
 /**
+ * Spring CQL extension of CassandraCqlClusterFactoryBean. This class exists only in the name of symmetry, based on the
+ * other CassandraData*FactoryBean classes.
+ *
  * @author Matthew T. Adams
  * @author Mark Paluch
  */
-public interface DefaultBeanNames extends DefaultCqlBeanNames {
-
-	String DATA_TEMPLATE = "cassandraTemplate";
-	String CONVERTER = "cassandraConverter";
-	String CONTEXT = "cassandraMapping";
-	String USER_TYPE_RESOLVER = "userTypeResolver";
-}
+public class CassandraCqlClusterFactoryBean extends CassandraClusterFactoryBean {}

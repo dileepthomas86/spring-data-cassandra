@@ -16,7 +16,7 @@
 package org.springframework.data.cql.support;
 
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.cql.config.java.AbstractSessionConfiguration;
+import org.springframework.data.cassandra.config.AbstractSessionConfiguration;
 
 import com.datastax.driver.core.NettyOptions;
 import com.datastax.driver.core.QueryOptions;
