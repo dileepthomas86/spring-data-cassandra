@@ -91,6 +91,8 @@ public class CassandraMappingContext
 	 */
 	public CassandraMappingContext() {
 
+		// TODO: Resolve this cycle by moving type resolution (using CustomConversions and UserTypeResolver)
+		// to MappingCassandraConverter.
 		setCustomConversions(new CassandraCustomConversions(Collections.EMPTY_LIST));
 		setSimpleTypeHolder(CassandraSimpleTypeHolder.HOLDER);
 	}
