@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *      http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,27 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.data.cql.core;
+package org.springframework.data.cassandra;
 
 import org.springframework.dao.UncategorizedDataAccessException;
 
 /**
- * Wrapper for all non RuntimeExceptions throws by the Cassandra Driver
+ * Spring data access exception for an uncategorized Cassandra exception.
  *
- * @author David Webb
+ * @author Alex Shvid
+ * @author Matthew T. Adams
  */
-public class CassandraUncategorizedDataAccessException extends UncategorizedDataAccessException {
+public class CassandraUncategorizedException extends UncategorizedDataAccessException {
 
-	private static final long serialVersionUID = -155082875466458401L;
+	private static final long serialVersionUID = 1029525121238025444L;
 
-	/**
-	 * Create the Exception
-	 *
-	 * @param message
-	 * @param cause
-	 */
-	public CassandraUncategorizedDataAccessException(String message, Throwable cause) {
-		super(message, cause);
+	public CassandraUncategorizedException(String msg, Throwable cause) {
+		super(msg, cause);
 	}
-
 }

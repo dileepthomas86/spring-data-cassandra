@@ -17,7 +17,6 @@ package org.springframework.data.cql.core;
 
 import org.springframework.dao.TypeMismatchDataAccessException;
 import org.springframework.data.cql.support.RowUtils;
-import org.springframework.data.cql.support.exception.IncorrectResultSetColumnCountException;
 import org.springframework.util.ClassUtils;
 import org.springframework.util.NumberUtils;
 

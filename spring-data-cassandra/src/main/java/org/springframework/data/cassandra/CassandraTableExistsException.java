@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *      http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,27 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.data.cql.support.exception;
-
-import org.springframework.dao.QueryTimeoutException;
+package org.springframework.data.cassandra;
 
 /**
- * Spring data access exception for a Cassandra write timeout.
+ * Spring data access exception for when a Cassandra table being created already exists.
  *
  * @author Matthew T. Adams
  */
-public class CassandraWriteTimeoutException extends QueryTimeoutException {
+public class CassandraTableExistsException extends CassandraSchemaElementExistsException {
 
-	private static final long serialVersionUID = -4374826375213670718L;
+	private static final long serialVersionUID = 6032967419751410352L;
 
-	private String writeType;
-
-	public CassandraWriteTimeoutException(String writeType, String msg, Throwable cause) {
-		super(msg, cause);
-		this.writeType = writeType;
+	public CassandraTableExistsException(String tableName, String msg, Throwable cause) {
+		super(tableName, ElementType.TABLE, msg, cause);
 	}
 
-	public String getWriteType() {
-		return writeType;
+	public String getTableName() {
+		return getElementName();
 	}
 }

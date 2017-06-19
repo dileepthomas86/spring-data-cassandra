@@ -27,7 +27,6 @@ import org.springframework.context.expression.BeanFactoryAccessor;
 import org.springframework.context.expression.BeanFactoryResolver;
 import org.springframework.data.cassandra.util.SpelUtils;
 import org.springframework.data.cql.core.CqlIdentifier;
-import org.springframework.data.cql.support.exception.UnsupportedCassandraOperationException;
 import org.springframework.data.mapping.Association;
 import org.springframework.data.mapping.AssociationHandler;
 import org.springframework.data.mapping.model.BasicPersistentEntity;

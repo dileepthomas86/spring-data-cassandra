@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *      http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,21 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.data.cql.support.exception;
+package org.springframework.data.cassandra;
 
-import org.springframework.dao.UncategorizedDataAccessException;
+import org.springframework.dao.TypeMismatchDataAccessException;
 
 /**
- * Spring data access exception for an uncategorized Cassandra exception.
+ * Spring data access exception for a Cassandra type mismatch exception.
  *
- * @author Alex Shvid
  * @author Matthew T. Adams
  */
-public class CassandraUncategorizedException extends UncategorizedDataAccessException {
+public class CassandraTypeMismatchException extends TypeMismatchDataAccessException {
 
-	private static final long serialVersionUID = 1029525121238025444L;
+	private static final long serialVersionUID = -7420058975444905629L;
 
-	public CassandraUncategorizedException(String msg, Throwable cause) {
+	public CassandraTypeMismatchException(String msg) {
+		super(msg);
+	}
+
+	public CassandraTypeMismatchException(String msg, Throwable cause) {
 		super(msg, cause);
 	}
 }

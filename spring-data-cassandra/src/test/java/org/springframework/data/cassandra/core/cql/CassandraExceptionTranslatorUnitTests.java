@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *      http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.data.cql.support;
+package org.springframework.data.cassandra.core.cql;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.Assume.*;
@@ -26,8 +26,9 @@ import org.junit.Test;
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.DataAccessResourceFailureException;
 import org.springframework.dao.TransientDataAccessResourceException;
-import org.springframework.data.cql.support.exception.*;
-import org.springframework.data.cql.support.exception.CassandraSchemaElementExistsException.ElementType;
+import org.springframework.data.cassandra.*;
+import org.springframework.data.cassandra.CassandraSchemaElementExistsException.ElementType;
+import org.springframework.data.cassandra.cql.CassandraExceptionTranslator;
 import org.springframework.util.ClassUtils;
 
 import com.datastax.driver.core.ConsistencyLevel;

@@ -38,8 +38,8 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.dao.IncorrectResultSizeDataAccessException;
-import org.springframework.data.cql.support.exception.CassandraConnectionFailureException;
-import org.springframework.data.cql.support.exception.CassandraInvalidQueryException;
+import org.springframework.data.cassandra.CassandraConnectionFailureException;
+import org.springframework.data.cassandra.CassandraInvalidQueryException;
 import org.springframework.scheduling.annotation.AsyncResult;
 import org.springframework.util.concurrent.ListenableFuture;
 

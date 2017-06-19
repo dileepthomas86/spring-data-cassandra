@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *      http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,25 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.data.cql.support.exception;
+package org.springframework.data.cassandra;
 
-import org.springframework.dao.InvalidDataAccessApiUsageException;
+import org.springframework.dao.TransientDataAccessException;
 
 /**
- * Spring data access exception for a Cassandra query that is syntactically correct but has an invalid configuration
- * clause.
+ * Spring data access exception for a Cassandra truncate exception.
  *
  * @author Matthew T. Adams
  */
-public class CassandraInvalidConfigurationInQueryException extends InvalidDataAccessApiUsageException {
+public class CassandraTruncateException extends TransientDataAccessException {
 
-	private static final long serialVersionUID = 4594321191806182918L;
+	private static final long serialVersionUID = 5730642491362430311L;
 
-	public CassandraInvalidConfigurationInQueryException(String msg) {
+	public CassandraTruncateException(String msg) {
 		super(msg);
 	}
 
-	public CassandraInvalidConfigurationInQueryException(String msg, Throwable cause) {
+	public CassandraTruncateException(String msg, Throwable cause) {
 		super(msg, cause);
 	}
 }

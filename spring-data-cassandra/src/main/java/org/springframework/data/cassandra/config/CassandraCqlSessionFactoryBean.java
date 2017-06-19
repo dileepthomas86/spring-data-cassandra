@@ -27,9 +27,9 @@ import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.support.PersistenceExceptionTranslator;
+import org.springframework.data.cassandra.cql.CassandraExceptionTranslator;
 import org.springframework.data.cql.core.CqlOperations;
 import org.springframework.data.cql.core.CqlTemplate;
-import org.springframework.data.cql.support.CassandraExceptionTranslator;
 import org.springframework.util.Assert;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
@@ -49,7 +49,7 @@ import com.datastax.driver.core.Session;
  * @see org.springframework.beans.factory.InitializingBean
  * @see org.springframework.dao.support.PersistenceExceptionTranslator
  * @see org.springframework.data.cql.core.CqlTemplate
- * @see org.springframework.data.cql.support.CassandraExceptionTranslator
+ * @see CassandraExceptionTranslator
  * @see com.datastax.driver.core.Cluster
  * @see com.datastax.driver.core.Session
  */

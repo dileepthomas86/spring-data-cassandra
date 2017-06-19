@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *      http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,24 +13,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.data.cql.support.exception;
+package org.springframework.data.cassandra;
 
-import org.springframework.dao.DataAccessException;
+import org.springframework.dao.QueryTimeoutException;
 
 /**
- * Spring data access exception for a Cassandra internal error.
+ * Spring data access exception for a Cassandra read timeout.
  *
  * @author Matthew T. Adams
  */
-public class CassandraInternalException extends DataAccessException {
+public class CassandraReadTimeoutException extends QueryTimeoutException {
 
-	private static final long serialVersionUID = 433061676465346338L;
+	private static final long serialVersionUID = -787022307935203387L;
 
-	public CassandraInternalException(String msg) {
-		super(msg);
+	private boolean wasDataReceived;
+
+	public CassandraReadTimeoutException(boolean wasDataReceived, String message, Throwable cause) {
+		super(message, cause);
+		this.wasDataReceived = wasDataReceived;
 	}
 
-	public CassandraInternalException(String msg, Throwable cause) {
-		super(msg, cause);
+	public boolean getWasDataReceived() {
+		return wasDataReceived;
 	}
 }
